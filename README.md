@@ -4,9 +4,17 @@ Right-aligns user messages and marks their bubbles with a quiet `You` label, lea
 
 A small, web-only extension for [Ultimate](https://github.com/HazAT/ultimate). No server facet, runtime dependencies or core patches.
 
-| Desktop, dark                                                                                      | Phone, light                                                                          |
-| -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| ![A right-aligned user message with image and text-file attachments](docs/images/desktop-dark.png) | ![The same message at 390px with a smaller left margin](docs/images/mobile-light.png) |
+## Preview
+
+The same conversation on desktop and phone: the user's question sits on the right, while the assistant's answer keeps its existing full-width card.
+
+### Desktop, dark
+
+![A right-aligned user question above the assistant's full-width answer](docs/images/desktop-dark.png)
+
+### Phone, light (390px)
+
+![The same question and answer on a narrow screen](docs/images/mobile-light.png)
 
 ## Install
 
