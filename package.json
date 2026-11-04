@@ -1,0 +1,16 @@
+{
+  "name": "ultimate-chat-layout",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A quiet, right-aligned user-message layout for Ultimate.",
+  "license": "MIT",
+  "repository": "github:artplan1/ultimate-chat-layout",
+  "type": "module",
+  "scripts": {
+    "check": "node scripts/run.ts check",
+    "test": "node scripts/run.ts test"
+  },
+  "engines": {
+    "node": ">=26"
+  }
+}
