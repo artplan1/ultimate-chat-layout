@@ -1,6 +1,24 @@
 import { createElement } from 'react'
 import { renderToStaticMarkup } from 'react-dom/server'
-import { expect, test } from 'vitest'
+import { expect, test, vi } from 'vitest'
+
+vi.mock('lucide-react', () => ({
+  CornerLeftUpIcon: () => null,
+  ReplyIcon: () => null,
+}))
+
+vi.mock('@/sdk', async (importOriginal) => ({
+  ...(await importOriginal<Record<string, unknown>>()),
+  api: { history: () => Promise.resolve({ entries: [] }) },
+  events: { emit: () => undefined },
+  fillComposer: () => undefined,
+  shownUserText: (text: string) => text,
+  useComposerReady: () => false,
+  useTranscript: () => [],
+  UserText: () => null,
+  useUltimate: () => ({ focusComposer: () => undefined }),
+}))
+
 import extension from '../web.tsx'
 
 const core = createElement('button', { 'data-core': 'original' }, 'Original content and actions')
